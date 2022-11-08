@@ -3,6 +3,7 @@ from .forms import Registrationform
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Login, Contents
 # Create your views here.
+#Create Home View.
 def home(response):
 	return render(response,'dump/top.html',{})
 
