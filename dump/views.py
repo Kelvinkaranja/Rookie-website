@@ -7,6 +7,7 @@ from .models import Login, Contents
 def home(response):
 	return render(response,'dump/top.html',{})
 
+#Create Login View.
 def login(response):
 	return render(response,'dump/list.html',{})
 
