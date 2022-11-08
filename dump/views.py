@@ -3,6 +3,7 @@ from .forms import Registrationform
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Login, Contents
 # Create your views here.
+
 #Create Home View.
 def home(response):
 	return render(response,'dump/top.html',{})
@@ -11,6 +12,7 @@ def home(response):
 def login(response):
 	return render(response,'dump/list.html',{})
 
+#Create Registrartion View.
 def registration(response):
 	if response.POST:
 		form=Registrationform(response.POST)
@@ -19,6 +21,7 @@ def registration(response):
 		return HttpResponseRedirect('dump/welcome.html',{'user':username})
 	return render(response,'dump/regform.html',{"form":Registrationform})
 
+#Create Welcome View.
 def welcome(response):
 	form=Registrationform(response.POST)
 	form.save()
