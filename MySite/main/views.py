@@ -4,5 +4,6 @@ from django.http import HttpResponse
 def view11(response):
 	return render(response,'main/base.html',{})
 
+#Authorization page
 def auth(response):
 	return render(response,'main/auth.html',{})
