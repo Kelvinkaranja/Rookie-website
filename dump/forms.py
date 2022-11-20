@@ -7,7 +7,7 @@ from .models import Login,Contents
 class Registrationform(ModelForm):
 	full_name=forms.TextInput()
 	username=forms.TextInput()
-
+#Inherit from your models
 	class Meta:
 		model=Login
 		fields=['username']
