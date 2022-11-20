@@ -27,6 +27,7 @@ def registration(response):
 def welcome(response):
 	form=Registrationform(response.POST)
 	form.save()
+	#Assign username for use in html dictionary
 	username = form.cleaned_data.get("username")
 	usernames=Login.objects.all()
 	for a in usernames:
