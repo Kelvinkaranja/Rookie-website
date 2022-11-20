@@ -34,6 +34,7 @@ def welcome(response):
 		#Iterate to find username
 		user=(a.username)
 		users=user.upper()
+	#Create an instance of the login model using the username data
 	log=Login(username)
 	return render(response, 'dump/welcome.html',{'user':users})
 
