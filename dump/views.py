@@ -14,6 +14,7 @@ def login(response):
 
 #Create Registrartion View.
 def registration(response):
+	#Save your form data upon validation
 	if response.POST:
 		form=Registrationform(response.POST)
 		if form.is_valid():
