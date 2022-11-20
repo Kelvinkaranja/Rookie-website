@@ -31,6 +31,7 @@ def welcome(response):
 	username = form.cleaned_data.get("username")
 	usernames=Login.objects.all()
 	for a in usernames:
+		#Iterate to find username
 		user=(a.username)
 		users=user.upper()
 	log=Login(username)
