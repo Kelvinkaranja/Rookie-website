@@ -19,6 +19,7 @@ def registration(response):
 		form=Registrationform(response.POST)
 		if form.is_valid():
 			form.save()
+			#Redirect to the welcome page
 		return HttpResponseRedirect('dump/welcome.html',{'user':username})
 	return render(response,'dump/regform.html',{"form":Registrationform})
 
