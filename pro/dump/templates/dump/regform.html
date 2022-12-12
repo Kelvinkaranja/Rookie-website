@@ -1,0 +1,24 @@
+{%extends 'dump/top.html'%}
+
+{%block tit%}
+REGISTRATION FORM
+{%endblock%}
+
+
+
+{%block bod%}
+<p>PLEASE FILL IN THE REGISTRATION FORM TO CREATE AN ACCOUNT</p>
+<form method='post' action='/welcome' enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form.as_p}}
+
+	<button type='submit' name='save'>
+
+		Submit Form
+
+	</button>
+
+</form>
+
+</div>
+{%endblock%}

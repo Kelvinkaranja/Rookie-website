@@ -7,7 +7,7 @@ class Table1(models.Model):
 
 	def __str__(self):
 		return self.name 
-#class your columns
+
 class Cols(models.Model):
 	table=models.ForeignKey(Table1, on_delete=models.CASCADE)
 	first_name=models.CharField(max_length=200)
